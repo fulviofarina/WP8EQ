@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4998DEB-8106-4796-B5FC-A3F7AFB2E0CF}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tiler</RootNamespace>
+    <AssemblyName>Tiler</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>TilerFile.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Tiler.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListCtrl.xaml.cs">
+      <DependentUpon>ListCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <None Include="Basura\Copy of MainPage.xaml.cs">
+      <DependentUpon>Copy of MainPage.xaml</DependentUpon>
+    </None>
+    <Compile Include="Pages\FilterControl.xaml.cs">
+      <DependentUpon>FilterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorerPage.xaml.cs">
+      <DependentUpon>ExplorerPage.xaml</DependentUpon>
+    </Compile>
+    <None Include="Basura\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </None>
+    <None Include="Basura\MenuBtn.xaml.cs">
+      <DependentUpon>MenuBtn.xaml</DependentUpon>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <None Include="Basura\Copy of MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="Pages\FilterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ExplorerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="Basura\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Basura\MenuBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <Page Include="Pages\ListCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Dark\achievements.png" />
+    <Content Include="Assets\Dark\activate.png" />
+    <Content Include="Assets\Dark\addtag.png" />
+    <Content Include="Assets\Dark\alarm.png" />
+    <Content Include="Assets\Dark\attach.png" />
+    <Content Include="Assets\Dark\audio.png" />
+    <Content Include="Assets\Dark\bluetooth.png" />
+    <Content Include="Assets\Dark\bug.png" />
+    <Content Include="Assets\Dark\calculator.png" />
+    <Content Include="Assets\Dark\calendar.gototoday.png" />
+    <Content Include="Assets\Dark\calendar.late.png" />
+    <Content Include="Assets\Dark\car.png" />
+    <Content Include="Assets\Dark\chart.png" />
+    <Content Include="Assets\Dark\checkbox.deselectall.png" />
+    <Content Include="Assets\Dark\checkbox.selectall.png" />
+    <Content Include="Assets\Dark\closet.png" />
+    <Content Include="Assets\Dark\dialpad.png" />
+    <Content Include="Assets\Dark\edittext.png" />
+    <Content Include="Assets\Dark\favs.removefrom.png" />
+    <Content Include="Assets\Dark\feature.frontcamera.png" />
+    <Content Include="Assets\Dark\folder.moveto.png" />
+    <Content Include="Assets\Dark\format.png" />
+    <Content Include="Assets\Dark\forwardmessage.png" />
+    <Content Include="Assets\Dark\fullscreen.expand.png" />
+    <Content Include="Assets\Dark\fullscreen.shrink.png" />
+    <Content Include="Assets\Dark\globe.png" />
+    <Content Include="Assets\Dark\gotoslide.png" />
+    <Content Include="Assets\Dark\goup.png" />
+    <Content Include="Assets\Dark\heart.png" />
+    <Content Include="Assets\Dark\heart2.broken.png" />
+    <Content Include="Assets\Dark\heart2.empty.png" />
+    <Content Include="Assets\Dark\heart2.png" />
+    <Content Include="Assets\Dark\linkto.png" />
+    <Content Include="Assets\Dark\linkto.withlinks.png" />
+    <Content Include="Assets\Dark\lock.png" />
+    <Content Include="Assets\Dark\manage.png" />
+    <Content Include="Assets\Dark\map.centerme.png" />
+    <Content Include="Assets\Dark\map.checkin.png" />
+    <Content Include="Assets\Dark\map.direction.png" />
+    <Content Include="Assets\Dark\map.neighborhood.png" />
+    <Content Include="Assets\Dark\map.turningpoint.png" />
+    <Content Include="Assets\Dark\marketplace.png" />
+    <Content Include="Assets\Dark\mic.png" />
+    <Content Include="Assets\Dark\notes.png" />
+    <Content Include="Assets\Dark\outline.squares.png" />
+    <Content Include="Assets\Dark\people.contacts.png" />
+    <Content Include="Assets\Dark\people.groups.png" />
+    <Content Include="Assets\Dark\photo.aspect.png" />
+    <Content Include="Assets\Dark\photo.crop.png" />
+    <Content Include="Assets\Dark\photo.fix.png" />
+    <Content Include="Assets\Dark\photo.fix.undo.png" />
+    <Content Include="Assets\Dark\photo.flash.auto.png" />
+    <Content Include="Assets\Dark\photo.flash.off.png" />
+    <Content Include="Assets\Dark\photo.flash.on.png" />
+    <Content Include="Assets\Dark\photo.light.off.png" />
+    <Content Include="Assets\Dark\photo.light.on.png" />
+    <Content Include="Assets\Dark\photo.redeyes.png" />
+    <Content Include="Assets\Dark\photo.rotate.png" />
+    <Content Include="Assets\Dark\pin.png" />
+    <Content Include="Assets\Dark\pin.remove.png" />
+    <Content Include="Assets\Dark\play.smartdj.png" />
+    <Content Include="Assets\Dark\question.png" />
+    <Content Include="Assets\Dark\replymeetingrequest.png" />
+    <Content Include="Assets\Dark\respond.png" />
+    <Content Include="Assets\Dark\search.refine.png" />
+    <Content Include="Assets\Dark\send.message.png" />
+    <Content Include="Assets\Dark\send.mylocation.png" />
+    <Content Include="Assets\Dark\send.photo.png" />
+    <Content Include="Assets\Dark\send.poi.png" />
+    <Content Include="Assets\Dark\send.text.png" />
+    <Content Include="Assets\Dark\send.video.png" />
+    <Content Include="Assets\Dark\slideshow.png" />
+    <Content Include="Assets\Dark\sms.png" />
+    <Content Include="Assets\Dark\social.like.png" />
+    <Content Include="Assets\Dark\social.retweet.png" />
+    <Content Include="Assets\Dark\social.unlike.png" />
+    <Content Include="Assets\Dark\sort.png" />
+    <Content Include="Assets\Dark\speaker.png" />
+    <Content Include="Assets\Dark\status.png" />
+    <Content Include="Assets\Dark\sum.png" />
+    <Content Include="Assets\Dark\switch.png" />
+    <Content Include="Assets\Dark\tabs.2.png" />
+    <Content Include="Assets\Dark\tabs.3.png" />
+    <Content Include="Assets\Dark\tabs.4.png" />
+    <Content Include="Assets\Dark\tabs.5.png" />
+    <Content Include="Assets\Dark\tabs.6.png" />
+    <Content Include="Assets\Dark\tabs.png" />
+    <Content Include="Assets\Dark\time.png" />
+    <Content Include="Assets\Dark\transport.repeat.png" />
+    <Content Include="Assets\Dark\transport.repeatone.png" />
+    <Content Include="Assets\Dark\transport.shuffle.png" />
+    <Content Include="Assets\Dark\voicemail.png" />
+    <Content Include="Assets\Dark\wallet.png" />
+    <Content Include="Assets\Dark\wifi.1.png" />
+    <Content Include="Assets\Dark\wifi.2.png" />
+    <Content Include="Assets\Dark\wifi.3.png" />
+    <Content Include="Assets\Dark\wifi.4.png" />
+    <Content Include="Assets\Dark\wifi.5.png" />
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Blue.jpg" />
+    <Content Include="Assets\Dark\add.png" />
+    <Content Include="Assets\Dark\back.png" />
+    <Content Include="Assets\Dark\basecircle.png" />
+    <Content Include="Assets\Dark\cancel.png" />
+    <Content Include="Assets\Dark\check.png" />
+    <Content Include="Assets\Dark\close.png" />
+    <Content Include="Assets\Dark\delete.png" />
+    <Content Include="Assets\Dark\download.png" />
+    <Content Include="Assets\Dark\edit.png" />
+    <Content Include="Assets\Dark\favs.addto.png" />
+    <Content Include="Assets\Dark\favs.png" />
+    <Content Include="Assets\Dark\feature.alarm.png" />
+    <Content Include="Assets\Dark\feature.calendar.png" />
+    <Content Include="Assets\Dark\feature.camera.png" />
+    <Content Include="Assets\Dark\feature.email.png" />
+    <Content Include="Assets\Dark\feature.phone.png" />
+    <Content Include="Assets\Dark\feature.search.png" />
+    <Content Include="Assets\Dark\feature.settings.png" />
+    <Content Include="Assets\Dark\feature.video.png" />
+    <Content Include="Assets\Dark\folder.png" />
+    <Content Include="Assets\Dark\like.png" />
+    <Content Include="Assets\Dark\microphone.png" />
+    <Content Include="Assets\Dark\minus.png" />
+    <Content Include="Assets\Dark\new.png" />
+    <Content Include="Assets\Dark\next.png" />
+    <Content Include="Assets\Dark\overflowdots.png" />
+    <Content Include="Assets\Dark\questionmark.png" />
+    <Content Include="Assets\Dark\refresh.png" />
+    <Content Include="Assets\Dark\save.png" />
+    <Content Include="Assets\Dark\share.png" />
+    <Content Include="Assets\Dark\stop.png" />
+    <Content Include="Assets\Dark\sync.png" />
+    <Content Include="Assets\Dark\transport.ff.png" />
+    <Content Include="Assets\Dark\transport.pause.png" />
+    <Content Include="Assets\Dark\transport.play.png" />
+    <Content Include="Assets\Dark\transport.rew.png" />
+    <Content Include="Assets\Dark\upload.png" />
+    <Content Include="Green.jpg" />
+    <Content Include="Assets\Light\add.png" />
+    <Content Include="Assets\Light\back.png" />
+    <Content Include="Assets\Light\basecircle.png" />
+    <Content Include="Assets\Light\cancel.png" />
+    <Content Include="Assets\Light\check.png" />
+    <Content Include="Assets\Light\close.png" />
+    <Content Include="Assets\Light\delete.png" />
+    <Content Include="Assets\Light\download.png" />
+    <Content Include="Assets\Light\edit.png" />
+    <Content Include="Assets\Light\favs.addto.png" />
+    <Content Include="Assets\Light\favs.png" />
+    <Content Include="Assets\Light\feature.alarm.png" />
+    <Content Include="Assets\Light\feature.calendar.png" />
+    <Content Include="Assets\Light\feature.camera.png" />
+    <Content Include="Assets\Light\feature.email.png" />
+    <Content Include="Assets\Light\feature.phone.png" />
+    <Content Include="Assets\Light\feature.search.png" />
+    <Content Include="Assets\Light\feature.settings.png" />
+    <Content Include="Assets\Light\feature.video.png" />
+    <Content Include="Assets\Light\folder.png" />
+    <Content Include="Assets\Light\like.png" />
+    <Content Include="Assets\Light\microphone.png" />
+    <Content Include="Assets\Light\minus.png" />
+    <Content Include="Assets\Light\new.png" />
+    <Content Include="Assets\Light\next.png" />
+    <Content Include="Assets\Light\overflowdots.png" />
+    <Content Include="Assets\Light\questionmark.png" />
+    <Content Include="Assets\Light\refresh.png" />
+    <Content Include="Assets\Light\save.png" />
+    <Content Include="Assets\Light\share.png" />
+    <Content Include="Assets\Light\stop.png" />
+    <Content Include="Assets\Light\sync.png" />
+    <Content Include="Assets\Light\transport.ff.png" />
+    <Content Include="Assets\Light\transport.pause.png" />
+    <Content Include="Assets\Light\transport.play.png" />
+    <Content Include="Assets\Light\transport.rew.png" />
+    <Content Include="Assets\Light\upload.png" />
+    <Content Include="Red.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agent\Agent.csproj">
+      <Project>{A794A7E3-EE14-44A9-9589-83FA9BC10C45}</Project>
+      <Name>Agent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EQ\EQ.csproj">
+      <Project>{BC0B4743-EACF-4E99-A535-FC6AD9CF49D4}</Project>
+      <Name>EQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\This\This.csproj">
+      <Project>{9AB37BBD-B7C1-4078-AA0B-CF9D2855CD8A}</Project>
+      <Name>This</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.advertising.mobile.ui, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
